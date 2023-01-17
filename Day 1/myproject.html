@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projectday1</title>
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <style>
+
+        .fixedbar{
+            overflow: hidden;
+            background-color: aliceblue;
+            position: fixed;
+            margin-top: 10px;
+            width: 100%;
+            top: 0;
+        }
+        .top{
+            /* position: fixed; */
+            /* width: 95%; */
+            display: flex;
+            height: 60px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px 0 30px;
+            background-color: #F8BBD0;
+            /* border: 1px solid red; */
+        }
+        .top>div:nth-child(1){    
+            display: flex;
+            align-items: center;
+        }
+        .top img{
+            height: 40px;
+            margin: 30px;
+        }
+        .top button{
+            border: none;
+            border-radius: 10px;
+            color: white;
+            background-color: #F50057;
+            padding: 15px;
+        }
+        .top span{
+            font-size: 25px;
+            color: yellow;
+        }
+        .top>div>div{
+            margin-left: 20px;
+            border: dashed;
+            height: 20px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+        }
+        
+        .nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 20px;
+            padding: 10px 0 10px 0;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        }
+        .nav>a{
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* .sortcut>button{
+            display: block;
+        }
+        .sortcut{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        } */        
+        .sortcut{
+            display: flex;
+            margin-top: 200px;
+            justify-content: center;
+        }
+        .sortcut button{
+            padding: 7px 15px 7px 15px;
+            border-radius: 20px;
+            background-color: white;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            border: none;
+        }
+
+        .banner{
+            margin-top: 20px;
+        }
+        .banner>img{
+            /* margin: auto; */
+            width: 100%;
+            height: 350px;
+        }
+
+        .nextpage{
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .nextpage a{
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .container{
+            text-align: center;
+        }
+        .sortby{
+            width: 90%;
+            margin: auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            display: grid;
+            grid-template-columns: repeat(7,1fr);
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            gap: 10px;
+            padding: 10px;
+        }
+        .sortby>div{
+            height:50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-right: 1px solid black;
+        }
+        .sortby>div:nth-child(7){
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="fixedbar">
+        <div class="top">
+            <div>
+                <img src="https://media6.ppl-media.com/mediafiles/ecomm/home/1543587824_logo.png" alt="">
+                <span>&starf;</span>
+                <span>&starf;</span>
+                <p>FLAT Rs. 100 OFF</p>
+                <p>on your first order!</p>
+                <span>&starf;</span>
+                <span>&starf;</span>
+                <div>
+                    <p>use code:</p>
+                    <h2>APP FIRST</h2>
+                </div>
+            </div>
+            <div><button>DOWNLOAD APP</button></div>
+        </div>
+    
+        <div class="nav">
+            <img src="https://media6.ppl-media.com/static/purplle/img/purplle-logo-1.svg" alt="">        
+            <a href="">SHOP CATEGORIES</a>
+            <a href="">BRANDS</a>
+            <a href="">OFFERS</a>
+            <a href="">NEW</a>
+            <a href="">SPLURGE</a>
+            <a href="">MAGAZINE</a>
+            <a href="">ELITE OFFERS</a>       
+        </div>
+    </div>
+
+    <div class="sortcut">
+        <div>
+            <button>Fiama</button>
+            <button>Healthvit</button>
+            <button>Vaadi Herbals</button>
+            <button>Good Vibes</button>
+            <button>DermDoc</button>
+            <button>Santoor</button>
+            <button>Savlon</button>
+            <button>Yerdley</button>
+        </div>
+    </div>   
+
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide banner">
+            <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1673866064_maybelline_web_hp.jpg" alt="">
+        </div>
+        <div class="swiper-slide banner">
+            <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1672992650_web-2596-x-836.jpg" alt="">
+        </div>
+        <div class="swiper-slide banner">
+            <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1669711062_sky-high-day_homepage-carousal_1280x400px.gif?tr=f-gif" alt="">
+        </div>
+        <div class="swiper-slide banner">
+            <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1669711064_mny-wld-banner_ssmi_1280x400px.jpg" alt="">
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="nextpage">
+        <div>
+            <a href="">Home</a>
+            <span>></span>
+            <a href="">Brands</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>MAYBELLINE</h1>
+        <div class="sortby">
+            <div>Category All </div>
+            <div>Price Range All </div>
+            <div>Benifts All </div>
+            <div>Skin Concern All </div>
+            <div>Finish All </div>
+            <div>More filter options 9 more option </div>
+            <div>Sort By Relevance </div>
+        </div>
+        <h1>NEW ARRIVALS</h1>
+    </div>
+    
+</body>
+
+<!-- Initialize Swiper -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+ <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+ </script>
+
+
+</html>
