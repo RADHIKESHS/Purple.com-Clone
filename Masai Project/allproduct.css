@@ -1,0 +1,29 @@
+
+.mid{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+.mid>div{
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.mid img{
+    width: 100%;
+    height: 240px;
+}
+.mid>div button{
+    display: block;
+    margin: auto;
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+    margin-bottom: 10px;
+    width: 50%;
+    background-color: gray;
+}

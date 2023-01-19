@@ -1,0 +1,71 @@
+.F-top{
+    margin: auto;
+    margin-bottom: 3px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align: center;
+    gap: 10px;
+    padding: 10px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.F-top>div{
+    border-right: 1px solid black;
+    padding: 20px 40px;
+}
+.F-top>div:nth-child(3){
+    border: none;
+}
+
+.F-mid{
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: aliceblue;
+}
+.F-mid>div{
+    width: 30%;
+}
+.F-mid>div:nth-child(2)>div{
+    display: flex;
+    background-color: palevioletred;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.F-mid-child{
+    width: 50%;
+    margin-right: 85px;
+}
+
+.F-Bottom{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.payment{
+    height: 80px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: antiquewhite;
+}
+.payment>div{
+    display: flex;
+    align-items: center;
+    padding: 0 100px 0 100px;
+    
+}
+.payment>div>img{
+    width: 100%;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+.payment>div:nth-child(2)>img{
+    width: 70%;
+    height: 50px;
+}
