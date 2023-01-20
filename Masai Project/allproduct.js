@@ -1,14 +1,18 @@
 let midproduct= document.querySelector(".mid");
+// let filter= document.getElementById("")
+
+
 let cart=[];
+let main=[];
 
 fetch("api/allproduct.json")
 .then(res => res.json())
 .then((res)=>{
     display(res);
-    console.log(res);
+    main= res
+    // console.log(res);
 })
 .catch(error => console.log(error));
-
 
 function display(data){
     midproduct.innerHTML="";
@@ -52,3 +56,44 @@ function display(data){
 
 
 }
+
+// let shop = document.getElementById("shop")
+// bodylotion.addEventListener("click",()=>{
+//   display(main);
+// })
+
+let bodylotion = document.getElementById("bodylotion")
+bodylotion.addEventListener("click",()=>{
+  let data = main.filter(ele => ele.category == "bodylotion");
+  display(data);
+})
+
+let facepack = document.getElementById("facepack")
+facepack.addEventListener("click",()=>{
+  let data = main.filter(ele => ele.category == "facepack");
+  display(data);
+})
+
+let clinsers = document.getElementById("clinsers")
+clinsers.addEventListener("click",()=>{
+  let data = main.filter(ele => ele.category == "clinsers");
+  display(data);
+})
+
+let sampoo = document.getElementById("sampoo")
+sampoo.addEventListener("click",()=>{
+  let data = main.filter(ele => ele.category == "sampoo");
+  display(data);
+})
+
+let nightcream = document.getElementById("nightcream")
+nightcream.addEventListener("click",()=>{
+  let data = main.filter(ele => ele.category == "nightcream");
+  display(data);
+})
+
+let skincarekit = document.getElementById("skincarekit")
+skincarekit.addEventListener("click",()=>{
+  let data = main.filter(ele => ele.category == "skincarekit");
+  display(data);
+})

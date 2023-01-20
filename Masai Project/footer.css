@@ -29,8 +29,9 @@
 .F-mid>div:nth-child(2)>div{
     display: flex;
     background-color: palevioletred;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    /* border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px; */
+    border-radius: 20px;
     padding-left: 30px;
     margin-bottom: 10px;
     color: white;
@@ -38,7 +39,7 @@
 
 .F-mid-child{
     width: 50%;
-    margin-right: 85px;
+    /* align-items: right; */
 }
 
 .F-Bottom{
