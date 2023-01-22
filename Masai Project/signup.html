@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APNA MALL</title>
+    <style>
+      .top{
+
+        display: flex;
+        height: 60px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 50px 0 30px;
+        background-color: #F8BBD0;
+      }
+        .top>div:nth-child(1){    
+        display: flex;
+        align-items: center;
+      }
+        .top img{
+        height: 40px;
+        margin: 30px;
+      }
+        .top button{
+        border: none;
+        border-radius: 10px;
+        color: white;
+        background-color: #F50057;
+        padding: 15px;
+      }
+        .top span{
+        font-size: 25px;
+        color: yellow;
+      }
+      .nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+        padding: 0px 100px 0px 50px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        color: #F50057;
+      }
+      .nav>div{
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .nav span{
+        font-size: 35px;
+        font-weight: bold;
+      }
+
+      .container{
+        width: 350px;
+        /* height: 70vh; */
+        margin: auto;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        /* border: 1px solid red; */
+      }
+      form>input{
+          width: 90%;
+          border: none;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+          padding: 10px;
+          margin: 5px;
+      }
+      #password{
+          margin-top: 10px;
+          margin-bottom: 10px;
+      }
+      #submit{
+        color: white;
+        background-color: #F8BBD0;
+        border-radius: 15px;
+      }
+
+    </style>
+</head>
+   <body>
+    <div class="top">
+      <div>
+          <img src="https://media6.ppl-media.com/mediafiles/ecomm/home/1543587824_logo.png" alt="">
+          <span>&starf;</span>
+          <span>&starf;</span>
+          <p>FLAT Rs. 100 OFF</p>
+          <p>on your first order!</p>
+          <span>&starf;</span>
+          <span>&starf;</span>
+      </div>
+      <div><button>DOWNLOAD APP</button></div>
+  </div>
+  <div class="nav">
+    <a href="./index.html"><img src="https://media6.ppl-media.com/static/purplle/img/purplle-logo-1.svg" alt=""></a>
+    <h2>WELCOME <span>☺</span></h2>
+    </div>        
+</div>
+     <div class="container">
+        <h1>SIGN UP</h1>
+        <form id="form" style="width: 90%;margin: auto;" >
+          <input id="fname" type="text" placeholder="First Name">
+          <br>
+          <input id="lname" type="text" placeholder="Last Name">
+          <br>
+          <input id="email" type="Eamail" placeholder="Email">
+          <br>
+          <input id="phone" type="number" placeholder="Phone Number(optional)">
+          <br>
+          <input id="password" type="Password" placeholder="password">
+          <br>
+          <p>Passwords are case sensitive and require <span>a minimum of 8 charecters and three of the following four conditions:</span></p>
+          
+          <input  id="submit" type="submit" value="CREATE AN ACCOUNT" >
+          <p>Have an account?<a href="./signin.html">Sign In</a></p>
+        </form>
+      </div>
+   </body>
+
+   <script>
+      let form=document.getElementById("form")
+      let fname=document.getElementById("fname")
+      let lname=document.getElementById("lname")
+      let email=document.getElementById("email")
+      let phone=document.getElementById("phone")
+      let password=document.getElementById("password")
+      let submit=document.getElementById("submit");
+
+      let data=JSON.parse(localStorage.getItem("formdata"))||[]
+        form.addEventListener("submit",(e)=>{
+          e.preventDefault();
+           let formdata={
+            fname:fname.value,
+            lname:lname.value,
+            email:email.value,
+            phone:phone.value,
+            password:password.value,
+        }
+        data.push(formdata)
+        localStorage.setItem("formdata",JSON.stringify(data))
+        alert ("Please Sign in!")
+        window.location.href="./signin.html"
+       })
+    </script>
+</html>

@@ -57,10 +57,10 @@ function display(data){
 
 }
 
-// let shop = document.getElementById("shop")
-// bodylotion.addEventListener("click",()=>{
-//   display(main);
-// })
+let shop = document.getElementById("shop")
+shop.addEventListener("click",()=>{
+  display(main);
+})
 
 let bodylotion = document.getElementById("bodylotion")
 bodylotion.addEventListener("click",()=>{

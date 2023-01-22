@@ -27,15 +27,6 @@
     font-size: 25px;
     color: yellow;
 }
-.top>div>div{
-    margin-left: 20px;
-    border: dashed;
-    height: 20px;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    padding: 5px;
-}
 .nav{
     display: flex;
     align-items: center;

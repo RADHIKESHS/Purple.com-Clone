@@ -35,15 +35,6 @@
     font-size: 25px;
     color: yellow;
 }
-.top>div>div{
-    margin-left: 20px;
-    border: dashed;
-    height: 20px;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    padding: 5px;
-}
 
 .nav{
     display: flex;
@@ -60,9 +51,10 @@
     align-items: center;
 }
 .nav a{
+    margin: 0 10px 0 10px;
     text-decoration: none;
     font-weight: bold;
-
+    color: blue;
 }
 .dropdown-content {
   display: none;
@@ -123,6 +115,12 @@
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     gap: 10px;
     padding: 10px;
+}
+#login{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-left: 4px;
 }
 .sortby>div{
     height:50px;
