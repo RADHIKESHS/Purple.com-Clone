@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #bill-container {
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 10px;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 12px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        #total {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        #pay-button {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bill-container">
+        <h2>Final Bill</h2>
+        <table id="bill-table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="bill-body">
+            </tbody>
+        </table>
+        <div id="total"></div>
+        <button id="pay-button">Pay Now</button>
+    </div>
+
+</body>
+<script>
+    const billBody = document.getElementById("bill-body");
+    const totalElement = document.getElementById("total");
+    const items = JSON.parse(localStorage.getItem("cart"));
+    let total = 0;
+
+    for (let i = 0; i < items.length; i++) {
+        const item = items[i];
+        const row = document.createElement("tr");
+
+        const nameCell = document.createElement("td");
+        nameCell.innerText = item.title;
+        row.appendChild(nameCell);
+
+        const quantityCell = document.createElement("td");
+        quantityCell.innerText = item.quantity;
+        row.appendChild(quantityCell);
+
+        const priceCell = document.createElement("td");
+        priceCell.innerText = "₹" + item.price;
+        row.appendChild(priceCell);
+
+        const totalCell = document.createElement("td");
+        const itemTotal = item.quantity * item.price;
+        total += itemTotal;
+        totalCell.innerText = "₹" + itemTotal.toFixed(2);
+        row.appendChild(totalCell);
+
+        billBody.appendChild(row);
+    }
+
+    totalElement.innerText = "Total: ₹" + total.toFixed(2);
+
+</script>
+
+</html>
