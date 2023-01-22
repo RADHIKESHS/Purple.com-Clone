@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APNA MALL</title>
+    <style>
+        .top{
+
+            display: flex;
+            height: 60px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px 0 30px;
+            background-color: #F8BBD0;
+        }
+        .top>div:nth-child(1){    
+            display: flex;
+            align-items: center;
+        }
+        .top img{
+            height: 40px;
+            margin: 30px;
+        }
+        .top button{
+            border: none;
+            border-radius: 10px;
+            color: white;
+            background-color: #F50057;
+            padding: 15px;
+        }
+        .top span{
+            font-size: 25px;
+            color: yellow;
+        }
+        .nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+            padding: 0px 100px 0px 50px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            color: #F50057;
+        }
+        .nav>div{
+            width: 30%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav span{
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .container{
+            width: 300px;
+            height: 70vh;
+            margin: auto;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            /* border: 1px solid red; */
+        }
+
+        h1{
+            margin-bottom: 100px;
+        }
+        form>input{
+            border: none;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            padding: 10px;
+        }
+        #password{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        #submit{
+            color: white;
+            background-color: #F8BBD0;
+            border-radius: 15px;
+        }
+        
+
+    </style>
+</head>
+<body>    
+    <div class="top">
+        <div>
+            <img src="https://media6.ppl-media.com/mediafiles/ecomm/home/1543587824_logo.png" alt="">
+            <span>&starf;</span>
+            <span>&starf;</span>
+            <p>FLAT Rs. 100 OFF</p>
+            <p>on your first order!</p>
+            <span>&starf;</span>
+            <span>&starf;</span>
+        </div>
+        <div><button>DOWNLOAD APP</button></div>
+    </div>
+    <div class="nav">
+        <a href="./index.html"><img src="https://media6.ppl-media.com/static/purplle/img/purplle-logo-1.svg" alt=""></a>
+        <h2>WELCOME <span>☺</span></h2>
+        </div>        
+    </div>
+    <div class="container">
+        <h1>SIGN IN </h1>
+        <form>
+            <input id="email" type="Email" placeholder="Email">
+            <br>
+            <input id="password" type="Password" placeholder="password">
+            <br>
+            <input  id="submit" type="submit" value="SIGN-IN" >
+            <h4>Forgot Your Password</h4>
+            <p>Don't have an account?<a href="./signup.html">Sign Up</a></p>
+        </form>
+    </div>
+</body>
+<script>
+    let output=document.getElementById("output")
+    let s=JSON.parse(localStorage.getItem("formdata"))||[]
+    // console.log(s);
+    let form=document.querySelector("form")
+    let email=document.getElementById("email")
+    let password=document.getElementById("password");
+    form.addEventListener("submit",(e)=>{
+        e.preventDefault();
+
+        let istrue = false;
+        for(let i=0;i<s.length;i++){
+            if(s[i].email===email.value && s[i].password===password.value){
+            istrue=true;
+            }
+        }
+
+        if(istrue){
+            window.location="index.html"
+            alert("Enjoy Our Service 😍")
+        }else{
+            alert("Please ! Check Id or Password 😥")
+        }
+    })
+
+</script>
+</html>
