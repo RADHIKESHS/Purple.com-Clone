@@ -130,16 +130,9 @@
     form.addEventListener("submit",(e)=>{
         e.preventDefault();
 
-        let istrue = false;
-        for(let i=0;i<s.length;i++){
-            if(s[i].email===email.value && s[i].password===password.value){
-            istrue=true;
-            }
-        }
-
-        if(istrue){
-            window.location="index.html"
+        if(s.email== email.value && s.password == password.value){
             alert("Enjoy Our Service 😍")
+            window.location="index.html"
         }else{
             alert("Please ! Check Id or Password 😥")
         }

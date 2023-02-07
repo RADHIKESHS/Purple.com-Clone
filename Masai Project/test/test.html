@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 20px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <h2>Payment Information</h2>
+        <label for="card-number">Card Number:</label>
+        <input type="text" id="card-number">
+        <br>
+        <label for="expiration-date">Expiration Date:</label>
+        <input type="text" id="expiration-date">
+        <br>
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv">
+        <br>
+        <button type="submit">Submit Payment</button>
+    </form>
+
+</body>
+    
+
+</html>

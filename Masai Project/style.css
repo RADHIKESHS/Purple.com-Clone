@@ -56,6 +56,9 @@
     font-weight: bold;
     color: blue;
 }
+#login{
+    width :200px
+}
 .dropdown-content {
   display: none;
   top:80%;

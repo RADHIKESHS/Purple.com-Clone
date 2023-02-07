@@ -107,15 +107,15 @@
      <div class="container">
         <h1>SIGN UP</h1>
         <form id="form" style="width: 90%;margin: auto;" >
-          <input id="fname" type="text" placeholder="First Name">
+          <input id="fname" type="text" placeholder="First Name" required>
           <br>
-          <input id="lname" type="text" placeholder="Last Name">
+          <input id="lname" type="text" placeholder="Last Name" required>
           <br>
-          <input id="email" type="Eamail" placeholder="Email">
+          <input id="email" type="Eamail" placeholder="Email" required>
           <br>
           <input id="phone" type="number" placeholder="Phone Number(optional)">
           <br>
-          <input id="password" type="Password" placeholder="password">
+          <input id="password" type="Password" placeholder="password" required>
           <br>
           <p>Passwords are case sensitive and require <span>a minimum of 8 charecters and three of the following four conditions:</span></p>
           
@@ -144,8 +144,7 @@
             phone:phone.value,
             password:password.value,
         }
-        data.push(formdata)
-        localStorage.setItem("formdata",JSON.stringify(data))
+        localStorage.setItem("formdata",JSON.stringify(formdata))
         alert ("Please Sign in!")
         window.location.href="./signin.html"
        })
